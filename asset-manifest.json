@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dongqlee/react_jordan/static/css/main.807e72ea.css",
+    "main.js": "/dongqlee/react_jordan/static/js/main.5aae4255.js",
+    "static/js/787.cdfe00ef.chunk.js": "/dongqlee/react_jordan/static/js/787.cdfe00ef.chunk.js",
+    "index.html": "/dongqlee/react_jordan/index.html",
+    "main.807e72ea.css.map": "/dongqlee/react_jordan/static/css/main.807e72ea.css.map",
+    "main.5aae4255.js.map": "/dongqlee/react_jordan/static/js/main.5aae4255.js.map",
+    "787.cdfe00ef.chunk.js.map": "/dongqlee/react_jordan/static/js/787.cdfe00ef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.807e72ea.css",
+    "static/js/main.5aae4255.js"
+  ]
+}
