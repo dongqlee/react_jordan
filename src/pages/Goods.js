@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Container } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import prodata from "./Prodata"
+import prodata from "./proData"
 
 export default function Goods() {
   const [data] = useState(prodata)

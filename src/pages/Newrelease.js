@@ -1,7 +1,7 @@
 import './pages.css'
 import { useState } from "react"
 import { Container } from "react-bootstrap"
-import prodata from "./Prodata"
+import prodata from "./proData"
 import { Link, Route, Routes } from 'react-router-dom'
 import Prodetail from "./Prodetail"
 

@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { Container } from "react-bootstrap"
 import { Link, Route, Routes } from "react-router-dom"
-import prodata from "./Prodata"
+import prodata from "./proData"
 import Prodetail from "./Prodetail"
 
 export default function Women() {
