@@ -25,7 +25,6 @@ const cart = createSlice({
     }
   }
 })
-
 export const { addCount, subCount, deleteItem, addItem } = cart.actions 
 export default configureStore({
   reducer: {
