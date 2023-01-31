@@ -14,6 +14,7 @@ import Snkrs from './pages/Snkrs';
 import Goods from './pages/Goods';
 import Air from './pages/Air';
 import Login from './pages/Login';
+import Cart from './pages/Cart';
 
 const Textbox = styled.div`
   widows: 100%;
@@ -35,6 +36,7 @@ const Button = styled.button`
   background-color: black;
   font-weight: bold;
   color: white;
+  margin-bottom: 80px;
   &:hover {
     opacity: 0.8;
   }
@@ -61,13 +63,16 @@ function App() {
           <span className='search_txt'>검색</span>
         </div>
         <div className='heart'><i class="fa-regular fa-heart"></i></div>
-        <div className='shoppingbag'><i class="fa-solid fa-bag-shopping"></i></div>
+        <div className='shoppingbag'>
+          <Link to={'/Cart'}>
+            <i class="fa-solid fa-bag-shopping"></i>
+          </Link>
+          </div>
       </div>
       <Navbar bg="white" variant="white">
         <Container className='lnb'>
-
           <Nav className="me-auto" style={{width: '75%'}}>
-            <Nav.Link onClick={() => {navigate('/')}} className='logo'><img src={process.env.PUBLIC_URL+'/images/logo.png'} alt='' style={{width: '80px'}} /></Nav.Link>
+            <Nav.Link onClick={() => {navigate('/react_jordan')}} className='logo'><img src={process.env.PUBLIC_URL+'/images/logo.png'} alt='' style={{width: '80px'}} /></Nav.Link>
             <Nav.Link onClick={() => {navigate('/Newrelease')}} className='nav'>New Release</Nav.Link>
             <Nav.Link onClick={() => {navigate('/Men')}} className='nav'>Men</Nav.Link>
             <Nav.Link onClick={() => {navigate('/Women')}} className='nav'>Women</Nav.Link>
@@ -84,7 +89,7 @@ function App() {
         <span className='more'>자세히 보기</span>
       </div>
       <Routes>
-        <Route path='/' element={
+        <Route path='/react_jordan' element={
           <Container>
             {
               mains.map((main, i) => {
@@ -107,15 +112,13 @@ function App() {
                   </>
                 )
               })
-              
             }
           </Container>
-          
         }>
         </Route>
       </Routes>
       <Routes>
-        <Route path='/' element={
+        <Route path='/react_jordan' element={
           <Container>
             <p className='flight_title'>NOW IN FLIGHT</p>
             <div className='btn_box'>
@@ -150,6 +153,7 @@ function App() {
           }>
         </Route>
         <Route path='Login' element={<Login />}/>
+        <Route path='Cart' element={<Cart />} />
         <Route path='NewRelease/*' element={<Newrelease />}></Route>
         <Route path='Men/*' element={<Men />}></Route>
         <Route path='Women/*' element={<Women />}></Route>

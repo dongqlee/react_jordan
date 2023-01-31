@@ -210,3 +210,43 @@ a {color: black; text-decoration: none;}
   color: white;
   border-radius: 20px;
 }
+.cart_sheet {
+  text-align: center;
+  line-height: auto;
+}
+.cart_sheet .txt {
+  padding-top: 80px;
+}
+.cart_sheet .ea {
+  padding-top: 80px;
+}
+.cart_sheet .ea button {
+  width: 30px; height: 30px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+}
+.cart_sheet .delete button {
+  border: 1px solid #ccc;
+}
+.cart_sheet img {
+  margin: 0 auto;
+}
+
+.pop {
+  width: 240px; height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 10px;
+}
+.btn_pop {
+  display: flex;
+  justify-content: center;
+}
+.btn_pop button {
+  width: 100px;
+  margin: 0 20px;
+}

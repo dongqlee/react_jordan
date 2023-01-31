@@ -1,6 +1,9 @@
+import { useState } from "react"
 import { Container } from "react-bootstrap"
+import { useDispatch } from "react-redux"
 import { Link, useParams, useNavigate } from "react-router-dom"
 import styled from "styled-components"
+import { addItem } from "./store"
 
 
 const Button = styled.button`
@@ -14,6 +17,8 @@ const Button = styled.button`
 export default function Prodetail(props) {
   const {data} = props
   const {id} = useParams()
+  const dispatch = useDispatch()
+  const [ popup, setPopup ] = useState(false)
 
   const array01 = [250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305, 310]
   const array02 = [225, 230, 235, 240, 245, 250, 255, 260]
@@ -245,10 +250,28 @@ export default function Prodetail(props) {
           : ''}
           <div className="btn_box"> 
             <Button className="buy">구매하기</Button>  
-            <Button className="cart">장바구니</Button>
+            <Button className="cart" onClick={() => {
+               setPopup(true)
+            }}
+             >장바구니</Button>
           </div>
         </div>  
       </div>
+      {popup === true ? 
+      <div className="pop">
+        <p>장바구니에 담으시겠습니까?</p>
+          <div className="btn_pop">
+            <button onClick={() => {
+              dispatch(addItem({id: data[id].id, image: data[id].image, desc: data[id].desc, discount: data[id].discount, title: data[id].title, count:1, price: data[id].price}))
+              setPopup(false)
+              alert('장바구니에 담았습니다.')
+              }}>확인</button>
+            <button onClick={() => {
+              setPopup(false)
+            }}>취소</button>
+          </div>
+          </div> 
+          : null}
     </Container>
   )
 }
