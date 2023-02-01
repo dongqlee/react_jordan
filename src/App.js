@@ -136,7 +136,6 @@ function App() {
                             {flight.discount === 0 ? "" : <li className='discount'>{flight.discount.toLocaleString()} 원</li>}
                             {flight.discount === 0 ?
                             <li className='price'>{flight.price.toLocaleString()} 원</li> : <li className='delete'>{flight.price.toLocaleString()} 원</li>}
-                            
                             <li className='pro_desc'>{flight.desc}</li>
                           </ul>
                         </Link>
