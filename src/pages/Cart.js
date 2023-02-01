@@ -9,8 +9,8 @@ export default function Cart() {
 
   return (
     <Container>
-      <div>
-        <h4>장바구니</h4>
+      <div className="cart">
+        <p className="title">장바구니</p>
         <Table className="cart_sheet">
           <thead>
             <tr>

@@ -15,6 +15,7 @@ import Goods from './pages/Goods';
 import Air from './pages/Air';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
+import Carousel from 'react-bootstrap/Carousel';
 
 const Textbox = styled.div`
   widows: 100%;
@@ -59,13 +60,13 @@ function App() {
       </div>
       <div className='header_left'>
         <div className='btn_search'>
-          <div className='icon'><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div className='icon'><i className="fa-solid fa-magnifying-glass"></i></div>
           <span className='search_txt'>검색</span>
         </div>
-        <div className='heart'><i class="fa-regular fa-heart"></i></div>
+        <div className='heart'><i className="fa-regular fa-heart"></i></div>
         <div className='shoppingbag'>
           <Link to={'/Cart'}>
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i className="fa-solid fa-bag-shopping"></i>
           </Link>
           </div>
       </div>
@@ -88,15 +89,16 @@ function App() {
         반품 및 환불 지연 안내
         <span className='more'>자세히 보기</span>
       </div>
+
       <Routes>
         <Route path='/react_jordan' element={
-          <Container>
+          <Carousel variant="dark">
             {
               mains.map((main, i) => {
                 return (
-                  <>
+                  <Carousel.Item interval={7000}>
                     <Link to=''>
-                      <img src={main.image} alt='' style={{width: '100%'}} />
+                      <img src={main.image} alt='' style={{width: '70%', margin: '0 auto'}} />
                     </Link>
                     <Textbox>
                       <p className='slogan' style={{fontSize: 14}}>{main.slogan}</p>
@@ -106,26 +108,21 @@ function App() {
                         <li>{main.desc02}</li>
                         <li>{main.desc03}</li>
                       </ul>
-                    
                       <Button>구매하기</Button>
                     </Textbox>
-                  </>
+                  </Carousel.Item>
                 )
               })
-            }
-          </Container>
+            }    
+          </Carousel>
         }>
         </Route>
       </Routes>
+     
       <Routes>
         <Route path='/react_jordan' element={
           <Container>
             <p className='flight_title'>NOW IN FLIGHT</p>
-            <div className='btn_box'>
-              <span className='btn_l'><i class="fa-solid fa-chevron-left"></i></span>
-              <span className='btn_r'><i class="fa-solid fa-chevron-right"></i></span>
-            </div>
-            
             <section className='flight_box'>
               <div className='flight_slide'>
                 {
@@ -229,10 +226,10 @@ function App() {
         </div>
         <div className='footer_bot'>
           <p className='txt'>
-            <span><i class="fa-solid fa-location-dot"></i></span> 
+            <span><i className="fa-solid fa-location-dot"></i></span> 
             &nbsp; 대한민국
             <span className='copy'>
-              <i class="fa-regular fa-copyright"></i>
+              <i className="fa-regular fa-copyright"></i>
               2023 Nike, Inc. All Rights Reserved
             </span>
             <span className='term01'>

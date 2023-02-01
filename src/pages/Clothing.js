@@ -13,7 +13,7 @@ export default function Clothing() {
       <Routes>
         <Route path="/" element={
           <Container>
-          <Link to='/'><p className="home">HOME</p></Link>
+          <Link to='/react_jordan'><p className="home">HOME</p></Link>
           <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>
           <p className="path">Clothing</p>
           <section className="pro_sheet">

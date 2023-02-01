@@ -12,7 +12,7 @@ export default function Newrelease() {
       <Routes>
         <Route path='/' element={
           <Container>
-          <Link to='/'>
+          <Link to='/react_jordan'>
             <p className="home">HOME</p>
           </Link>
           <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>

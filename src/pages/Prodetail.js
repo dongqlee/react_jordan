@@ -119,7 +119,7 @@ export default function Prodetail(props) {
 
   return (
     <Container>
-      <Link to='/'>
+      <Link to='/react_jordan'>
         <p className="home">HOME</p>
       </Link>
       <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>

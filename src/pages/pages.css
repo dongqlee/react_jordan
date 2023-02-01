@@ -210,6 +210,11 @@ a {color: black; text-decoration: none;}
   color: white;
   border-radius: 20px;
 }
+
+.cart .title {
+  font-weight: bold;
+  font-size: 32px;
+}
 .cart_sheet {
   text-align: center;
   line-height: auto;
