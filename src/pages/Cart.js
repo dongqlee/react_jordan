@@ -3,7 +3,6 @@ import Table from "react-bootstrap/Table";
 import { useDispatch, useSelector } from "react-redux";
 import { addCount, deleteItem, subCount } from "./store";
 
-
 export default function Cart() {
   const state = useSelector((state) => {return state})
   const dispatch = useDispatch()
@@ -27,7 +26,6 @@ export default function Cart() {
           <tbody>
             {
               state.cart.map((item, i) => {
-                
                 return (
                   <tr key={i}>
                     <td className="txt">{i+1}</td>
@@ -49,7 +47,7 @@ export default function Cart() {
                       }}>-</button>
                     </td>
                     <td className="txt">{state.cart[i].price.toLocaleString()} 원</td>
-                    <td className="txt">{(state.cart[i].price * state.cart[i].count).toLocaleString()} 원</td>
+                    <td className="txt total">{(state.cart[i].price * state.cart[i].count).toLocaleString()} 원</td>
                     <td className="txt delete">
                       <button onClick={()=> {
                         dispatch(deleteItem(state.cart[i].id))
