@@ -29,7 +29,6 @@ export default function Cart() {
           <tbody>
             {
               state.cart.map((item, i) => {
-              
                 totalPro = totalPro + state.cart[i].count
                 totalPrice = totalPrice + state.cart[i].count * state.cart[i].price
                 return (
@@ -92,8 +91,8 @@ export default function Cart() {
                 }</td>
               <td className="total_product"><p className="txt">{totalPro} 개</p></td>
               <td></td>
-              <td>{totalPrice.toLocaleString()} 원</td>
-              <td>결제하기</td>
+              <td className="total_product"><p className="txt">{totalPrice.toLocaleString()} 원</p></td>
+              <td className="total_product"><button type="button" className="buy">결제하기</button></td>
             </tr>
           </tbody>
         </Table>
