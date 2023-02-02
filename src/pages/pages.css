@@ -212,7 +212,9 @@ a {color: black; text-decoration: none;}
   border-radius: 20px;
   cursor: pointer;
 }
-
+.cart_sheet img {
+  margin: 0 auto;
+}
 .cart .title {
   font-weight: bold;
   font-size: 32px;
@@ -235,9 +237,20 @@ a {color: black; text-decoration: none;}
 .cart_sheet .delete button {
   border: 1px solid #ccc;
 }
-.cart_sheet img {
-  margin: 0 auto;
+.total_product {
+  position: relative;
 }
+
+.total_product .txt {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+
+
 
 .pop {
   width: 240px; height: 100px;
