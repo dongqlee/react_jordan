@@ -147,7 +147,7 @@ const prodata = [
   },
   {
     id: 'pro_13',
-    image: process.env.PUBLIC_URL+'/images/12.jpg',
+    image: process.env.PUBLIC_URL+'/images/13.jpg',
     title: '조던 23 엔지니어드',
     desc: '남성 플리스 팬츠',
     color: '1개 색상',
@@ -1097,7 +1097,7 @@ const prodata = [
   },
   {
     id: 'pro_91',
-    image: process.env.PUBLIC_URL+'/images/92.jpg',
+    image: process.env.PUBLIC_URL+'/images/91.jpg',
     title: '조던 플라이트 헤리티지',
     desc: '남성 후디',
     color: '2개 색상',

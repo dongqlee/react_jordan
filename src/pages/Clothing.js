@@ -53,6 +53,22 @@ export default function Clothing() {
                         </div>
                       </Link>  
                     </div>
+                    : 
+                    data.type02 === 'pants' ?
+                    <div className="pro">
+                      <Link to={`/Clothing/detail/${i}`}>
+                        <img src={data.image} alt='' style={{width: '100%'}}/>
+                        <div className="txt_box">
+                          <div className="condition">{data.condition}</div>
+                          <div className="title">{data.title}</div>
+                          <div className="desc">{data.desc}</div>
+                          <div className="color">{data.color}</div>
+                          <div className="price">{((data.price) * (1-data.discount)).toLocaleString()} 원</div>
+                          {data.discount === 0 ? "" : <div className="origin">{data.price.toLocaleString()} 원</div>}
+                          {data.discount === 0 ? "" : <div className="discount">{(data.discount) * 100 + '% 할인'}</div>}
+                        </div>
+                      </Link>  
+                    </div>
                     : ""}
                   </>     
                 )
