@@ -7,6 +7,9 @@ export default function Cart() {
   const state = useSelector((state) => {return state})
   const dispatch = useDispatch()
 
+  let totalPro = 0;
+  let totalPrice = 0;
+
   return (
     <Container>
       <div className="cart">
@@ -26,6 +29,8 @@ export default function Cart() {
           <tbody>
             {
               state.cart.map((item, i) => {
+                totalPro = totalPro + state.cart[i].count
+                totalPrice = totalPrice + state.cart[i].count * state.cart[i].price
                 return (
                   <tr key={i}>
                     <td className="txt">{i+1}</td>
@@ -59,21 +64,35 @@ export default function Cart() {
             }
             <tr>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>상품명</td>
+              <td>상품별 수량</td>
+              <td>총 수량</td>
               <td></td>
               <td>총 결제 금액</td>
               <td></td>
             </tr>
             <tr>
-            <td></td>
               <td></td>
+              <td>
+                {
+                  state.cart.map((item, i) => {
+                    return (
+                      <li>{state.cart[i].title}<span style={{fontSize: '12px', color: '#999'}}>({state.cart[i].desc})</span></li>
+                    )
+                  })
+                }
+              </td>
+              <td>{
+                  state.cart.map((item, i) => {
+                    return (
+                      <li>{state.cart[i].count} 개</li>
+                    )
+                  })
+                }</td>
+              <td className="total_product"><p className="txt">{totalPro} 개</p></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>결제하기</td>
+              <td className="total_product"><p className="txt">{totalPrice.toLocaleString()} 원</p></td>
+              <td className="total_product"><button type="button" className="buy">결제하기</button></td>
             </tr>
           </tbody>
         </Table>
