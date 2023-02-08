@@ -14,7 +14,7 @@ export default function Air() {
         <Link to='/react_jordan'>
           <p className="home">HOME</p>
         </Link>
-          <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>
+          <span className="icon"><i className="fa-solid fa-chevron-right"></i></span>
         <p className="path">Air Jordan Retro</p>
         <section className="pro_sheet">
           {
@@ -22,7 +22,7 @@ export default function Air() {
               return (
                 <>
                   {data.type03 === 'retro' ? 
-                  <div className="pro">
+                  <div className="pro" key={data.id}>
                     <Link to={`/Air/detail/${i}`}>
                       <img src={data.image} alt='' style={{width: '100%'}}/>
                       <div className="txt_box">

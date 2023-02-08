@@ -14,7 +14,7 @@ export default function Kids() {
           <Link to='/react_jordan'>
             <p className="home">HOME</p>
           </Link>
-          <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>
+          <span className="icon"><i className="fa-solid fa-chevron-right"></i></span>
           <p className="path">Kids</p>
           <section className="pro_sheet">
             {

@@ -14,7 +14,7 @@ export default function Snkrs() {
           <Link to='/react_jordan'>
             <p className="home">HOME</p>
           </Link>
-          <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>
+          <span className="icon"><i className="fa-solid fa-chevron-right"></i></span>
           <p className="path">SNKRS</p>
           <section className='pro_sheet'>
             {
@@ -22,7 +22,7 @@ export default function Snkrs() {
                 return (
                   <>
                     {data.type02 === 'snkrs' ? 
-                    <div className="pro">
+                    <div className="pro" key={data.id}>
                       <Link to={`/Snkrs/detail/${i}`}>
                         <img src={data.image} alt='' style={{width: '100%'}}/>
                         <div className="txt_box">

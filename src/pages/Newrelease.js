@@ -15,7 +15,7 @@ export default function Newrelease() {
           <Link to='/react_jordan'>
             <p className="home">HOME</p>
           </Link>
-          <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>
+          <span className="icon"><i className="fa-solid fa-chevron-right"></i></span>
           <p className='path'>New Release</p>
           <section className='pro_sheet'>
             {
@@ -23,8 +23,7 @@ export default function Newrelease() {
                 return (
                   <>
                   {data.condition === '신상품' ?
-                  
-                  <div className='pro'>
+                  <div className='pro' key={data.id}>
                     <Link to={`/Newrelease/detail/${index}`}>
                       <img src={data.image} alt='' style={{width: '100%'}} />
                       <div className='txt_box'>

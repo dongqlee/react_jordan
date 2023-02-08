@@ -14,6 +14,7 @@ import Snkrs from './pages/Snkrs';
 import Goods from './pages/Goods';
 import Air from './pages/Air';
 import Login from './pages/Login';
+import Join from './pages/Join';
 import Cart from './pages/Cart';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -54,7 +55,7 @@ function App() {
         <ul className='gnb'>
           <li>매장 찾기</li>
           <li>고객센터</li>
-          <li>가입하기</li>
+          <li><Link to={'/Join'}>가입하기</Link></li>
           <li><Link to={'/Login'}>로그인</Link></li>
         </ul>
       </div>
@@ -94,7 +95,7 @@ function App() {
         <Route path='/react_jordan' element={
           <Carousel variant="dark">
             {
-              mains.map((main, i) => {
+              mains.map((main) => {
                 return (
                   <Carousel.Item interval={7000}>
                     <Link to=''>
@@ -126,7 +127,7 @@ function App() {
             <section className='flight_box'>
               <div className='flight_slide'>
                 {
-                  flights.map((flight, j) => {
+                  flights.map((flight) => {
                     return(
                       <div className='pro'>
                         <Link to=''>
@@ -149,8 +150,9 @@ function App() {
           }>
         </Route>
         <Route path='Login' element={<Login />}/>
+        <Route path='Join' element={<Join />} />
         <Route path='Cart' element={<Cart />} />
-        <Route path='NewRelease/*' element={<Newrelease />}></Route>
+        <Route path='Newrelease/*' element={<Newrelease />}></Route>
         <Route path='Men/*' element={<Men />}></Route>
         <Route path='Women/*' element={<Women />}></Route>
         <Route path='Kids/*' element={<Kids />}></Route>

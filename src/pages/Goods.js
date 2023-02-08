@@ -13,7 +13,7 @@ export default function Goods() {
           <Container>
           <Link to='/react_jordan'>
             <p className="home">HOME</p></Link>
-            <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>
+            <span className="icon"><i className="fa-solid fa-chevron-right"></i></span>
           <p className="path">Goods</p>
           <section className="pro_sheet">
             {
@@ -21,7 +21,7 @@ export default function Goods() {
                 return (
                   <>
                     {data.type02 === 'goods' ? 
-                    <div className="pro">
+                    <div className="pro" key={data.id}>
                       <Link to={`/Goods/detail/${i}`}>
                         <img src={data.image} alt='' style={{width: '100%'}}/>
                         <div className="txt_box">

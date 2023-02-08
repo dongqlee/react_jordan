@@ -16,7 +16,7 @@ export default function Men() {
             <Link to='/react_jordan'>
               <p className="home">HOME</p>
             </Link>
-            <span className="icon"><i class="fa-solid fa-chevron-right"></i></span>
+            <span className="icon"><i className="fa-solid fa-chevron-right"></i></span>
             <p className="path">Men</p>
             <section className="pro_sheet">
               {
@@ -24,7 +24,7 @@ export default function Men() {
                   return (
                     <>
                       {data.type01 === 'men' ? 
-                      <div className="pro">
+                      <div className="pro" key={data.id}>
                         <Link to={`/Men/detail/${i}`}>
                         <img src={data.image} alt='' style={{width: '100%'}}/>
                           <div className="txt_box">

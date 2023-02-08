@@ -358,7 +358,7 @@ const prodata = [
     id: 'pro_30',
     image: process.env.PUBLIC_URL+'/images/30.jpg',
     title: '조던 플라이트 MVP',
-    desc: '남성 플라이트 MVP',
+    desc: '남성 플리스 팬츠',
     color: '2개 색상',
     price: 85000,
     discount: 0,
