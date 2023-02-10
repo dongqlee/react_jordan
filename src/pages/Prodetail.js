@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap"
 import { useDispatch } from "react-redux"
 import { Link, useParams, useNavigate } from "react-router-dom"
 import styled from "styled-components"
-import { addItem } from "./store"
+import { addItem, addPro } from "./store"
 import Accordion from 'react-bootstrap/Accordion';
 
 const Button = styled.button`
@@ -16,10 +16,10 @@ const Button = styled.button`
 
 export default function Prodetail(props) {
   const {data} = props
-  const {id} = useParams()
-  const dispatch = useDispatch()
-  const [ popup, setPopup ] = useState(false)
-
+  const {id} = useParams();
+  const dispatch = useDispatch();
+  const [ popup, setPopup ] = useState(false);
+  const [ popup01, setPopup01] = useState(false);
   const array01 = [250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305, 310]
   const array02 = [225, 230, 235, 240, 245, 250, 255, 260]
   const array03 = [225, 230, 235, 240, 245, 250]
@@ -118,6 +118,7 @@ export default function Prodetail(props) {
   }
 
   return (
+
     <Container>
       <Link to='/react_jordan'>
         <p className="home">HOME</p>
@@ -249,7 +250,11 @@ export default function Prodetail(props) {
           : ""))
           : ''}
           <div className="btn_box"> 
-            <Button className="buy">구매하기</Button>  
+            <Button className="buy" onClick={() => {
+              setPopup01(true)
+            }}>
+              위시리스트
+            </Button>  
             <Button className="cart" onClick={() => {
                setPopup(true)
             }}
@@ -294,20 +299,36 @@ export default function Prodetail(props) {
     </Accordion>
         </div>  
       </div>
-      {popup === true ? 
+
+      {popup01 === true ? 
       <div className="pop">
-        <p>장바구니에 담으시겠습니까?</p>
+        <p>위시리스트에 담으시겠습니까?</p>
         <div className="btn_pop">
           <button onClick={() => {
-            dispatch(addItem({id: data[id].id, image: data[id].image, desc: data[id].desc, discount: data[id].discount, title: data[id].title, count:1, price: data[id].price}))
-            setPopup(false)
-            alert('장바구니에 담았습니다.')
+            dispatch(addPro({id: data[id].id, image: data[id].image, desc: data[id].desc, discount: data[id].discount, title: data[id].title, count:1, price: data[id].price}))
+            setPopup01(false)
             }}>확인</button>
           <button onClick={() => {
-            setPopup(false)
+            setPopup01(false)
           }}>취소</button>
         </div>
       </div> 
+      : null}
+      
+      {popup === true ? 
+        <div className="pop">
+          <p>장바구니에 담으시겠습니까?</p>
+          <div className="btn_pop">
+            <button onClick={() => {
+              dispatch(addItem({id: data[id].id, image: data[id].image, desc: data[id].desc, discount: data[id].discount, title: data[id].title, count:1, price: data[id].price}))
+              setPopup(false)
+              alert('장바구니에 담았습니다.')
+              }}>확인</button>
+            <button onClick={() => {
+              setPopup(false)
+            }}>취소</button>
+          </div>
+        </div> 
       : null}
     </Container>
   )

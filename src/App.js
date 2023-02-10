@@ -1,6 +1,7 @@
 import './App.css';
 import {Routes, Route, Link, useNavigate} from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
 import styled from "styled-components"; 
 import maindata from './pages/mainData';
 import flightdata from './pages/flightData';
@@ -16,8 +17,7 @@ import Air from './pages/Air';
 import Login from './pages/Login';
 import Join from './pages/Join';
 import Cart from './pages/Cart';
-import Carousel from 'react-bootstrap/Carousel';
-
+import Wish from './pages/Wish';
 const Textbox = styled.div`
   widows: 100%;
   text-align: center;
@@ -64,7 +64,11 @@ function App() {
           <div className='icon'><i className="fa-solid fa-magnifying-glass"></i></div>
           <span className='search_txt'>검색</span>
         </div>
-        <div className='heart'><i className="fa-regular fa-heart"></i></div>
+        <div className='heart'>
+          <Link to={'/Wish'}>
+          <i className="fa-regular fa-heart"></i>
+          </Link>
+        </div>  
         <div className='shoppingbag'>
           <Link to={'/Cart'}>
             <i className="fa-solid fa-bag-shopping"></i>
@@ -151,6 +155,7 @@ function App() {
         </Route>
         <Route path='Login' element={<Login />}/>
         <Route path='Join' element={<Join />} />
+        <Route path='Wish' element={<Wish />} />
         <Route path='Cart' element={<Cart />} />
         <Route path='Newrelease/*' element={<Newrelease />}></Route>
         <Route path='Men/*' element={<Men />}></Route>
@@ -160,7 +165,6 @@ function App() {
         <Route path='Snkrs/*' element={<Snkrs />}></Route>
         <Route path='Goods/*' element={<Goods />}></Route>
         <Route path='Air/*' element={<Air />}></Route>
-        
       </Routes>
 
       <footer className='footer'>

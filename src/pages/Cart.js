@@ -89,10 +89,16 @@ export default function Cart() {
                     )
                   })
                 }</td>
-              <td className="total_product"><p className="txt">{totalPro} 개</p></td>
+              <td className="total_product">
+                <p className="txt">{totalPro} 개</p>
+              </td>
               <td></td>
-              <td className="total_product"><p className="txt">{totalPrice.toLocaleString()} 원</p></td>
-              <td className="total_product"><button type="button" className="buy">결제하기</button></td>
+              <td className="total_product">
+                <p className="txt">{totalPrice.toLocaleString()} 원</p>
+              </td>
+              <td className="total_product">
+                <button type="button" className="buy">결제하기</button>
+              </td>
             </tr>
           </tbody>
         </Table>
