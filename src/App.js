@@ -3,21 +3,16 @@ import {Routes, Route, Link, useNavigate} from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import styled from "styled-components"; 
-import maindata from './pages/mainData';
-import flightdata from './pages/flightData';
+import maindata from './data/mainData';
+import flightdata from './data/flightData';
 import { useState } from 'react';
-import Newrelease from './pages/Newrelease';
-import Men from './pages/Men';
-import Women from './pages/Women';
-import Kids from './pages/Kids';
-import Clothing from './pages/Clothing';
-import Snkrs from './pages/Snkrs';
-import Goods from './pages/Goods';
-import Air from './pages/Air';
 import Login from './pages/Login';
 import Join from './pages/Join';
 import Cart from './pages/Cart';
 import Wish from './pages/Wish';
+import Shop from './pages/Shop';
+import About from './pages/About';
+
 const Textbox = styled.div`
   widows: 100%;
   text-align: center;
@@ -79,14 +74,8 @@ function App() {
         <Container className='lnb'>
           <Nav className="me-auto" style={{width: '75%'}}>
             <Nav.Link onClick={() => {navigate('/react_jordan')}} className='logo'><img src={process.env.PUBLIC_URL+'/images/logo.png'} alt='' style={{width: '80px'}} /></Nav.Link>
-            <Nav.Link onClick={() => {navigate('/Newrelease')}} className='nav'>New Release</Nav.Link>
-            <Nav.Link onClick={() => {navigate('/Men')}} className='nav'>Men</Nav.Link>
-            <Nav.Link onClick={() => {navigate('/Women')}} className='nav'>Women</Nav.Link>
-            <Nav.Link onClick={() => {navigate('/Kids')}} className='nav'>Kids</Nav.Link>
-            <Nav.Link onClick={() => {navigate('/Clothing')}} className='nav'>Clothing</Nav.Link>
-            <Nav.Link onClick={() => {navigate('/Snkrs')}} className='nav'>Snkrs</Nav.Link>
-            <Nav.Link onClick={() => {navigate('/Goods')}} className='nav'>Goods</Nav.Link>
-            <Nav.Link onClick={() => {navigate('/Air')}} className='nav'>Air Jordan Retro</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/Shop')}} className='nav'>Shop</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/About')}} className='nav'>About</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -157,14 +146,8 @@ function App() {
         <Route path='Join' element={<Join />} />
         <Route path='Wish' element={<Wish />} />
         <Route path='Cart' element={<Cart />} />
-        <Route path='Newrelease/*' element={<Newrelease />}></Route>
-        <Route path='Men/*' element={<Men />}></Route>
-        <Route path='Women/*' element={<Women />}></Route>
-        <Route path='Kids/*' element={<Kids />}></Route>
-        <Route path='Clothing/*' element={<Clothing />}></Route>
-        <Route path='Snkrs/*' element={<Snkrs />}></Route>
-        <Route path='Goods/*' element={<Goods />}></Route>
-        <Route path='Air/*' element={<Air />}></Route>
+        <Route path='Shop/*' element={<Shop />} />
+        <Route path='About/*' element={<About />} />
       </Routes>
 
       <footer className='footer'>

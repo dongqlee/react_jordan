@@ -15,6 +15,16 @@ a {color: black; text-decoration: none;}
 .back {
   cursor: pointer;
 }
+.shop_list {
+  margin-bottom: 20px;
+}
+.shop_list a {
+  color: black;
+}
+.shop_list li:first-child {
+  margin-left: 100px;
+}
+
 .pro_sheet {
   display: flex;
   flex-wrap: wrap;
@@ -381,4 +391,85 @@ a {color: black; text-decoration: none;}
 .btn_pop button {
   width: 100px;
   margin: 0 20px;
+}
+
+
+
+
+/*------About------*/
+.mission {
+  background-color: black;
+}
+.mission .title_box {
+  position: relative;
+  z-index: 999;
+}
+.mission li.title {
+  height: 200px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.mission li.title_02 {
+  top: 160px; left: 0;
+}
+.mission li.title_03 {
+  top: 320px; left: 0;
+}
+.mission li.title_04 {
+  top: 480px; left: 0;
+}
+.mission li.title_05 {
+  top: 640px; left: 0;
+}
+.mission li.title_06 {
+  top: 800px; left: 0;
+}
+.mission li.title_07 {
+  top: 960px; left: 0;
+}
+.mission li.title_08 {
+  top: 1120px; left: 0;
+}
+.mission li.title_09 {
+  top: 1280px; left: 0;
+}
+.mission .ect_txt {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 1760px; left: 40px;
+  z-index: 999;
+}
+.mission .video {
+  width: 95%;
+  position: absolute;
+  top: 740px; left: 50%;
+  transform: translateX(-50%);
+}
+.mission .text {
+  width: 100%; height: 900px;
+  position: relative;
+}
+.mission .text>div {
+  color: white;
+  font-size: 48px;
+  position: absolute;
+  top: 45%; right: 100px;
+  transform: translateY(-50%);
+}
+.mission .contents {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  gap: 0 100px;
+  margin-bottom: 100px;
+}
+.mission .contents:last-child {
+  margin-bottom: 0;
+}
+.mission .contents .subTitle_box {
+  width: 30%;
+}
+.mission .contents img {
+  width: 70%;
 }

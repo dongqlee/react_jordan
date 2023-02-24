@@ -1,7 +1,7 @@
 import './pages.css'
 import { useState } from "react"
 import { Container } from "react-bootstrap"
-import prodata from "./proData"
+import prodata from "../data/proData"
 import { Link, Route, Routes } from 'react-router-dom'
 import Prodetail from "./Prodetail"
 
@@ -24,7 +24,7 @@ export default function Newrelease() {
                   <>
                   {data.condition === '신상품' ?
                   <div className='pro' key={data.id}>
-                    <Link to={`/Newrelease/detail/${index}`}>
+                    <Link to={`detail/${index}`}>
                       <img src={data.image} alt='' style={{width: '100%'}} />
                       <div className='txt_box'>
                         <div className="condition">{data.condition}</div>

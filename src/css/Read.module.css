@@ -1,0 +1,19 @@
+.readmore {
+  width: 100%; height: auto;
+  background-color: black;
+}
+.readmore p {
+  color: white;
+  font-size: 32px;
+  text-indent: 30px;
+  padding-top: 40px;
+}
+.readmore_box {
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.readmore_box li {
+  width: 32%;
+}

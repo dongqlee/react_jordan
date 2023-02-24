@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Container } from "react-bootstrap"
 import { Link, Route, Routes } from "react-router-dom"
-import prodata from "./proData"
+import prodata from "../data/proData"
 import Prodetail from "./Prodetail"
 
 export default function Goods() {
@@ -22,7 +22,7 @@ export default function Goods() {
                   <>
                     {data.type02 === 'goods' ? 
                     <div className="pro" key={data.id}>
-                      <Link to={`/Goods/detail/${i}`}>
+                      <Link to={`detail/${i}`}>
                         <img src={data.image} alt='' style={{width: '100%'}}/>
                         <div className="txt_box">
                           <div className="condition">{data.condition}</div>

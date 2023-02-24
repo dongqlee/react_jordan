@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { Container } from "react-bootstrap"
 import { Link, Route, Routes } from "react-router-dom"
-import prodata from "./proData"
+import prodata from "../data/proData"
 import Prodetail from "./Prodetail"
 
 export default function Women() {
@@ -26,7 +26,7 @@ export default function Women() {
                   <>
                     {data.type01 === 'women' ? 
                       <div className="pro">
-                        <Link to={`/Women/detail/${i}`}>
+                        <Link to={`detail/${i}`}>
                           <img src={data.image} alt='' style={{width: '100%'}}/>
                           <div className="txt_box">
                             <div className="condition">{data.condition}</div>
@@ -43,7 +43,7 @@ export default function Women() {
                       </div> :
                       data.type01 === 'genderless' ?
                       <div className="pro">
-                        <Link to={`/Women/detail/${i}`}>
+                        <Link to={`detail/${i}`}>
                           <img src={data.image} alt='' style={{width: '100%'}}/>
                           <div className="txt_box">
                             <div className="condition">{data.condition}</div>

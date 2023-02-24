@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Container } from "react-bootstrap"
 import { Link, Route, Routes } from "react-router-dom"
-import prodata from "./proData"
+import prodata from "../data/proData"
 import Prodetail from "./Prodetail"
 
 export default function Men() {
@@ -25,7 +25,7 @@ export default function Men() {
                     <>
                       {data.type01 === 'men' ? 
                       <div className="pro" key={data.id}>
-                        <Link to={`/Men/detail/${i}`}>
+                        <Link to={`detail/${i}`}>
                         <img src={data.image} alt='' style={{width: '100%'}}/>
                           <div className="txt_box">
                             <div className="condition">{data.condition}</div>
@@ -42,7 +42,7 @@ export default function Men() {
                       </div> : 
                       data.type01 === 'genderless' ?
                       <div className="pro">
-                        <Link to={`/Men/detail/${i}`}>
+                        <Link to={`detail/${i}`}>
                           <img src={data.image} alt='' style={{width: '100%'}}/>
                           <div className="txt_box">
                             <div className="condition">{data.condition}</div>

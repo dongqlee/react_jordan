@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Container } from "react-bootstrap"
 import { Link, Route, Routes } from "react-router-dom"
-import prodata from "./proData"
+import prodata from "../data/proData"
 import Prodetail from "./Prodetail"
 
 export default function Clothing() {
@@ -23,7 +23,7 @@ export default function Clothing() {
                   <>
                     {data.type02 === 'top' ? 
                     <div className="pro">
-                      <Link to={`/Clothing/detail/${i}`}>
+                      <Link to={`detail/${i}`}>
                         <img src={data.image} alt='' style={{width: '100%'}}/>
                         <div className="txt_box">
                           <div className="condition">{data.condition}</div>
@@ -40,7 +40,7 @@ export default function Clothing() {
                     </div> : 
                     data.type02 === 'jacket' ?
                     <div className="pro">
-                      <Link to={`/Clothing/detail/${i}`}>
+                      <Link to={`detail/${i}`}>
                         <img src={data.image} alt='' style={{width: '100%'}}/>
                         <div className="txt_box">
                           <div className="condition">{data.condition}</div>
@@ -56,7 +56,7 @@ export default function Clothing() {
                     : 
                     data.type02 === 'pants' ?
                     <div className="pro">
-                      <Link to={`/Clothing/detail/${i}`}>
+                      <Link to={`detail/${i}`}>
                         <img src={data.image} alt='' style={{width: '100%'}}/>
                         <div className="txt_box">
                           <div className="condition">{data.condition}</div>

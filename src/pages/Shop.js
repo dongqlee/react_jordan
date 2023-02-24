@@ -1,65 +1,76 @@
 import { useState } from "react";
-import { Nav } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import prodata from "./proData"
+import prodata from "../data/proData"
+import Newrelease from './Newrelease';
+import Men from './Men';
+import Women from './Women';
+import Kids from './Kids';
+import Clothing from './Clothing';
+import Snkrs from './Snkrs';
+import Goods from './Goods';
+import Air from './Air';
 
 export default function Shop() {
   const navigator = useNavigate();
   const data = useState(prodata);
   return (
     <>
-      <Nav defaultActiveKey="/Newrelease" as="ul">
-        <Nav.Item as ="li">
+      <Container>
+        <Nav defaultActiveKey="/Newrelease" as="ul" className="shop_list">
+          <Nav.Item as ="li">
             <Nav.Link onClick={() => {
-              navigator('/Newrelease')
+              navigator('/Shop')
             }}>New Release
             </Nav.Link>
-        </Nav.Item>
-        <Nav.Item as ="li">
+          </Nav.Item>
+          <Nav.Item as ="li">
             <Nav.Link onClick={() => {
-              navigator('/Men')
+              navigator('/Shop/Men')
             }}>Men
             </Nav.Link>
-        </Nav.Item>
-        <Nav.Item as ="li">
+          </Nav.Item>
+          <Nav.Item as ="li">
             <Nav.Link onClick={() => {
-              navigator('/Women')
+              navigator('/Shop/Women')
             }}>Women
             </Nav.Link>
-        </Nav.Item>
-        <Nav.Item as ="li">
+          </Nav.Item>
+          <Nav.Item as ="li">
             <Nav.Link onClick={() => {
-              navigator('/Kids')
+              navigator('/Shop/Kids')
             }}>Kids
             </Nav.Link>
-        </Nav.Item>
-        <Nav.Item as ="li">
+          </Nav.Item>
+          <Nav.Item as ="li">
             <Nav.Link onClick={() => {
-              navigator('/Clothing')
+              navigator('/Shop/Clothing')
             }}>Clothing
             </Nav.Link>
-        </Nav.Item>
-        <Nav.Item as ="li">
+          </Nav.Item>
+          <Nav.Item as ="li">
             <Nav.Link onClick={() => {
-              navigator('/Snkrs')
+              navigator('/Shop/Snkrs')
             }}>Snkrs
             </Nav.Link>
-        </Nav.Item>
-        <Nav.Item as ="li">
+          </Nav.Item>
+          <Nav.Item as ="li">
             <Nav.Link onClick={() => {
-              navigator('/Goods')
+              navigator('/Shop/Goods')
             }}>Goods
             </Nav.Link>
-        </Nav.Item>
-        <Nav.Item as ="li">
+          </Nav.Item>
+          <Nav.Item as ="li">
             <Nav.Link onClick={() => {
-              navigator('/Air')
+              navigator('/Shop/Air')
             }}>Air Jordan Retro
             </Nav.Link>
-        </Nav.Item>
-      </Nav>
+          </Nav.Item>
+        </Nav>
+      </Container>
+
       <Routes>
-        <Route path="Newrelease/*" element={<Newrelease data={data} />} />
+        <Route path="/*" element={<Newrelease data={data} />} />
         <Route path='Men/*' element={<Men data={data} />} />
         <Route path='Women/*' element={<Women data={data} />} />
         <Route path='Kids/*' element={<Kids data={data} />} />
